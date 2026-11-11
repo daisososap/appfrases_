@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:frases/screens/home_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home: HomeScreen(), // <-- Sin 'const' aquí
     );
   }
 }
